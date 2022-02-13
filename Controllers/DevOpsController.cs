@@ -7,11 +7,7 @@ namespace Docker.Demo.Controllers;
 public class DevOpsController : ControllerBase
 {
     private readonly ILogger<DevOpsController> _logger;
-
-    public DevOpsController(ILogger<DevOpsController> logger)
-    {
-        _logger = logger;
-    }
+    public DevOpsController(ILogger<DevOpsController> logger) => _logger = logger;
 
     [HttpGet(Name = "Get")]
     public IEnumerable<DevOps> Get()
